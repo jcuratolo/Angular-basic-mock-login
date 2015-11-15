@@ -12,28 +12,25 @@
         <link rel="stylesheet" href="css/custom.css">
         <!-- endinject -->
     </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
-                    <form name="signupForm" novalidate>
-                        <div class="form-group">
-                            
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <body ng-app="app">
+        <a href="#/signIn">Sign In</a>
+        <a href="#/signUp">Sign Up</a>
+        <ng-view></ng-view>
+
         <!-- bower:js -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
         <!-- endbower -->
 
         <!-- inject:js -->
-        <script src="js/app.module.js"></script>
-        <script src="js/components/alerts/alerts.module.js"></script>
-        <script src="js/components/alerts/alerts.controller.js"></script>
-        <script src="js/components/alerts/alerts.route.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/components/signIn/signIn.module.js"></script>
+        <script src="app/components/signUp/signUp.module.js"></script>
+        <script src="app/components/signIn/signIn.controller.js"></script>
+        <script src="app/components/signIn/signIn.route.js"></script>
+        <script src="app/components/signUp/signUp.controller.js"></script>
+        <script src="app/components/signUp/signUp.route.js"></script>
         <!-- endinject -->
     </body>
 </html>

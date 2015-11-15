@@ -19,13 +19,14 @@
   ],
   "dependencies": {
     "angular": "~1.4.7",
-    "bootstrap": "~3.3.5"
-},
-"overrides" : {
+    "bootstrap": "~3.3.5",
+    "angular-route": "~1.4.7"
+  },
+  "overrides": {
     "bootstrap": {
-        "main": [
-            "dist/css/bootstrap.css"
-        ]
+      "main": [
+        "dist/css/bootstrap.css"
+      ]
     }
-}
+  }
 }

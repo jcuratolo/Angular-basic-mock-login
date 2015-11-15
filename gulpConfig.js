@@ -3,6 +3,7 @@ module.exports = (function() {
     var src = 'src/';
     var js = 'js/';
     var css = 'css/';
+    var app = 'app/';
     var bower_components = 'bower_components';
     var config = {
         wiredep: {
@@ -12,6 +13,7 @@ module.exports = (function() {
             src: base + '/src',
             js: base + src + js,
             css: base + src + css,
+            app: base + src + app,
             index: base + src + 'index.html',
             bower: {
                 json: base + 'bower.json',

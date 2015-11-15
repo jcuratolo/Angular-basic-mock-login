@@ -3,6 +3,7 @@ var config = require('./gulpConfig.js');
 var wiredep = require('wiredep').stream;
 var inject = require('gulp-inject');
 var debug = require('gulp-debug');
+var browserSync = require('browser-sync').create();
 
 gulp.task('wiredep', function() {
     //var options = config.wiredep.getDefaultOptions();
@@ -18,13 +19,21 @@ gulp.task('inject', function() {
     var index = config.paths.index;
     var dest = config.paths.src;
     var source = gulp.src([
-        config.paths.js + '**/*.module.js',
-        config.paths.js + '**/*.service.js',
-        config.paths.js + '**/*.js',
+        config.paths.app + '**/*.module.js',
+        config.paths.app + '**/*.service.js',
+        config.paths.app + '**/*.js',
         config.paths.css + '**/*.css'
     ]);
 
     return gulp.src(index)
         .pipe(inject(source, {relative: true}))
         .pipe(gulp.dest(dest));
+});
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: './src/'
+        }
+    })
 });
