@@ -1,5 +1,3 @@
 (function(){
-    angular.module('app', [
-        'alerts'
-    ]);
+    angular.module('app', []);
 })();

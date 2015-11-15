@@ -1,0 +1,31 @@
+{
+  "name": "addlane-tech-screen",
+  "description": "",
+  "main": "gulpConfig.js",
+  "authors": [
+    "jcuratolo <jcuratolo@me.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./src/bower_components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+},
+"overrides" : {
+    "bootstrap": {
+        "main": [
+            "dist/css/bootstrap.css"
+        ]
+    }
+}
+}
