@@ -3,6 +3,7 @@
         'ngRoute',
         'sharedComponents',
         'signUp',
-        'signIn'
+        'signIn',
+        'success'
     ]);
 })();

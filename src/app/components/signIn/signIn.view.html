@@ -1,4 +1,24 @@
-<h1>Sign In</h1>
-<h1>Sign In</h1>
-<h1>Sign In</h1>
-<h1>Sign In</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Sign In!</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="signInForm" novalidate>
+                <bs-form-group>
+                    <label for="usernameInput" class="control-label">Username</label>
+                    <input type="text" id="usernameInput" name="usernamInpute" class="form-control" ng-model="user.username">
+                </bs-form-group>
+
+                <bs-form-group>
+                    <label for="passwordInput" class="control-label">Password</label>
+                    <input type="text" id="passwordInput" name="passwordInput" class="form-control" ng-model="user.password">
+                </bs-form-group>
+                <button type="button" name="SignIn" class="btn btn-success">Sign In</button>
+            </form>
+        </div>
+    </div>
+</div>
