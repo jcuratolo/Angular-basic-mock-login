@@ -1,10 +1,8 @@
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+    <div class="row row-centered">
+        <div class="col-xs-12 col-sm-4 col-centered">
             <h1>Sign Up!</h1>
             <hr>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-sm-offset-6">
             <form name="signUpForm" novalidate>
 
                 <bs-form-group for="signUpForm.usernameInput">
@@ -18,7 +16,8 @@
                 <bs-form-group for="signUpForm.passwordInput">
                     <password-input></password-input>
                 </bs-form-group>
-                <button type="button" name="signUp" class="btn btn-success" ng-click="signUp()">Sign Up</button>
+
+                <button type="button" name="signUp" class="btn btn-default" ng-click="signUp()">Sign Up</button>
             </form>
         </div>
     </div>

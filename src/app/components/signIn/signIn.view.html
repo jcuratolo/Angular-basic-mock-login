@@ -1,12 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Sign In!</h1>
-            <hr>
+
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
+    <div class="row row-centered">
+        <div class="col-xs-12 col-sm-4 col-centered">
+            <h1>Sign In!</h1>
+            <hr>
             <form name="signInForm" novalidate>
                 <bs-form-group>
                     <label for="usernameInput" class="control-label">Username</label>
@@ -17,7 +18,7 @@
                     <label for="passwordInput" class="control-label">Password</label>
                     <input type="text" id="passwordInput" name="passwordInput" class="form-control" ng-model="user.password" required>
                 </bs-form-group>
-                <button type="button" name="SignIn" class="btn btn-success" ng-click="authenticate(user)">Sign In</button>
+                <button type="button" name="SignIn" class="btn btn-default" ng-click="authenticate(user)">Sign In</button>
             </form>
         </div>
     </div>
