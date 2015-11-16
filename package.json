@@ -10,7 +10,9 @@
     "wiredep": "^3.0.0-beta"
   },
   "devDependencies": {
-    "browser-sync": "^2.10.0"
+    "browser-sync": "^2.10.0",
+    "gulp-jshint": "^1.12.0",
+    "jshint-stylish": "^2.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

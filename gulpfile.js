@@ -3,6 +3,8 @@ var config = require('./gulpConfig.js');
 var wiredep = require('wiredep').stream;
 var inject = require('gulp-inject');
 var debug = require('gulp-debug');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
 var browserSync = require('browser-sync').create();
 
 gulp.task('wiredep', function() {
@@ -30,12 +32,15 @@ gulp.task('inject', function() {
         .pipe(gulp.dest(dest));
 });
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: './src/'
-        }
-    });
+gulp.task('jshint', function () {
+    var allJsFiles = config.paths.app + '/**/*.js';
+
+    return gulp.src(allJsFiles)
+        .pipe(jshint())
+        .pipe(jshint.reporter(stylish, {
+            verbose: true
+        }))
+        .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('serve-dev', function() {
