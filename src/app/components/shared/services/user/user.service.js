@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function UserSvc() {
+    function UserSvc($q) {
         var svc = this;
         var users = [];
 
@@ -27,7 +27,7 @@
             angular.extend(newUser, userInfo);
             users.push(newUser);
 
-            return newUser;
+            return $q.resolve(newUser);
         }
 
         function findByUsername(username) {
@@ -40,6 +40,8 @@
             return result;
         }
     }
+
+    UserSvc.$inject = ['$q'];
 
     angular
         .module('sharedComponents')

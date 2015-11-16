@@ -4,9 +4,14 @@
     function SignUpController ($scope, $location, UserSvc) {
         function signUp() {
             if ($scope.signUpForm.$valid) {
-                UserSvc.create($scope.user);
-                $location.path('/success');
+                UserSvc
+                    .create($scope.user)
+                    .then(goToSuccessView);
             }
+        }
+
+        function goToSuccessView() {
+            $location.path('/success');
         }
 
         $scope.user = {};
