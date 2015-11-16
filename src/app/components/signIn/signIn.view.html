@@ -10,14 +10,14 @@
             <form name="signInForm" novalidate>
                 <bs-form-group>
                     <label for="usernameInput" class="control-label">Username</label>
-                    <input type="text" id="usernameInput" name="usernamInpute" class="form-control" ng-model="user.username">
+                    <input type="text" id="usernameInput" name="usernameInput" class="form-control" ng-model="user.username" required>
                 </bs-form-group>
 
                 <bs-form-group>
                     <label for="passwordInput" class="control-label">Password</label>
-                    <input type="text" id="passwordInput" name="passwordInput" class="form-control" ng-model="user.password">
+                    <input type="text" id="passwordInput" name="passwordInput" class="form-control" ng-model="user.password" required>
                 </bs-form-group>
-                <button type="button" name="SignIn" class="btn btn-success">Sign In</button>
+                <button type="button" name="SignIn" class="btn btn-success" ng-click="authenticate(user)">Sign In</button>
             </form>
         </div>
     </div>

@@ -1,9 +1,21 @@
 (function() {
     'use strict';
 
-    function SignInController () {}
+    function SignInController ($scope, $location, AuthenticationSvc) {
+        $scope.user = {};
 
-    SignInController.$inject = [];
+        $scope.authenticate = function(user) {
+            if ($scope.signInForm.$valid) {
+                AuthenticationSvc
+                    .authenticate(user)
+                    .then(function() {
+                        $location.path('/success');
+                    });
+            }
+        };
+    }
+
+    SignInController.$inject = ['$scope', '$location', 'AuthenticationSvc'];
 
     angular
         .module('signIn')

@@ -6,7 +6,7 @@
         var users = [];
 
         svc.create = create;
-        svc.find = find;
+        svc.findByUsername = findByUsername;
         svc.getUsers = getUsers;
 
         function getUsers() {
@@ -33,11 +33,18 @@
         function findByUsername(username) {
             var result;
 
+            // Build an array of users matching the supplied username
             result = users.filter(function(user) {
                 return user.username === username;
             });
 
-            return result;
+            // If we found user(s), resolve with the first one found
+            // Otherwise reject the result of the search
+            if (result && result.length && result.length > 0) {
+                return $q.resolve(result[0]);
+            } else {
+                return $q.reject(result);
+            }
         }
     }
 
