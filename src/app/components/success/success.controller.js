@@ -1,9 +1,11 @@
 (function() {
     'use strict';
 
-    function SuccessController ($scope) {}
+    function SuccessController ($scope, UserSvc) {
+        $scope.getUsers = UserSvc.getUsers;
+    }
 
-    SuccessController.$inject = ['$scope'];
+    SuccessController.$inject = ['$scope', 'UserSvc'];
 
     angular
         .module('success')
