@@ -1,0 +1,7 @@
+<label for="usernameInput">Username</label>
+<input type="text" id="usernameInput" name="username" class="form-control" ng-model="username" required>
+<ng-messages for="signUpForm.username.$error">
+    <ng-message when="required">
+        You need a username to signup!
+    </ng-message>
+</ng-messages>

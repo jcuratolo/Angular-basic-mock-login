@@ -4,10 +4,12 @@
             <h1>Sign Up!</h1>
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-6">
-            <form name="signupForm" novalidate>
+            <form name="signUpForm" novalidate>
                 <div class="form-group">
-                    <label for="usernameInput">Username</label>
-                    <input type="text" id="usernameInput" class="form-control">
+                    <username-input></username-input>
+                </div>
+                <div class="form-group">
+                    
                 </div>
                 <div class="form-group">
                     <label for="emailInput">Email</label>
@@ -15,10 +17,14 @@
                 </div>
                 <div class="form-group">
                     <label for="passwordInput">Password</label>
-                    <input type="password" id="passwordInput" class="form-control">
+                    <input type="password" id="passwordInput" name="password" class="form-control" ng-minlength=6>
                 </div>
                 <button type="button" name="button" class="btn btn-success">Sign Up</button>
             </form>
         </div>
     </div>
 </div>
+
+<script type="text/ng-template">
+
+</script>

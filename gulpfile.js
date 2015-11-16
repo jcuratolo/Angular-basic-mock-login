@@ -35,5 +35,18 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: './src/'
         }
-    })
+    });
+});
+
+gulp.task('serve-dev', function() {
+    browserSync.init({
+        server: {
+            baseDir: './src/'
+        }
+    });
+
+    gulp.watch([
+                './src/**/*.*',
+                '!./src/bower_components'
+            ]).on('change', browserSync.reload);
 });
