@@ -5,12 +5,12 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-6">
             <form name="signUpForm" novalidate>
-                <div class="form-group">
+                <bs-form-group for="signUpForm.username" form="signUpForm">
                     <username-input></username-input>
-                </div>
-                <div class="form-group">
-                    
-                </div>
+                </bs-form-group>
+                <bs-form-group for="signupForm.email" form="signUpForm">
+                    <email-input></email-input>
+                </bs-form-group>
                 <div class="form-group">
                     <label for="emailInput">Email</label>
                     <input type="email" id="emailInput" class="form-control">
