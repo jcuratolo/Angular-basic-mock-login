@@ -1,19 +1,13 @@
 (function() {
     'use strict';
 
-    function SignUpController () {}
+    function SignUpController ($scope) {
+        $scope.user = {};
+    }
 
-    SignUpController.$inject = [];
+    SignUpController.$inject = ['$scope'];
 
     angular
         .module('signUp')
         .controller('SignUpController', SignUpController);
-
-        angular
-            .module('signUp')
-            .directive('usernameInput', function() {
-                return {
-                    templateUrl: 'app/components/signUp/usernameInput.html'
-                };
-            });
 })();

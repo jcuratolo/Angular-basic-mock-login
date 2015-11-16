@@ -46,7 +46,9 @@ gulp.task('serve-dev', function() {
     });
 
     gulp.watch([
-                './src/**/*.*',
+                'index.html',
+                './src/app/**/*.html',
+                './src/app/**/*.js',
                 '!./src/bower_components'
             ]).on('change', browserSync.reload);
 });

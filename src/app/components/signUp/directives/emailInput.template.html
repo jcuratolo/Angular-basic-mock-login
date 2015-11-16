@@ -1,0 +1,14 @@
+<label for="emailInput" class="control-label">Email</label>
+<input type="email" id="emailInput" name="emailInput" class="form-control" ng-model="user.email" required jc-email spellcheck="false">
+<ng-messages for="signUpForm.emailInput.$error" ng-if="signUpForm.emailInput.$dirty">
+    <ng-message when="email">
+        <p class="help-block">
+            You need a valid email address!
+        </p>
+    </ng-message>
+    <ng-message when="required">
+        <p class="help-block">
+            You need an email address for your account!
+        </p>
+    </ng-message>
+</ng-messages>

@@ -5,26 +5,23 @@
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-6">
             <form name="signUpForm" novalidate>
-                <bs-form-group for="signUpForm.username" form="signUpForm">
+
+                <bs-form-group for="signUpForm.usernameInput">
                     <username-input></username-input>
                 </bs-form-group>
-                <bs-form-group for="signupForm.email" form="signUpForm">
+
+                <bs-form-group for="signUpForm.emailInput">
                     <email-input></email-input>
                 </bs-form-group>
-                <div class="form-group">
-                    <label for="emailInput">Email</label>
-                    <input type="email" id="emailInput" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="passwordInput">Password</label>
-                    <input type="password" id="passwordInput" name="password" class="form-control" ng-minlength=6>
-                </div>
+
+                <bs-form-group for="signUpForm.passwordInput">
+                    <password-input></password-input>
+                </bs-form-group>
                 <button type="button" name="button" class="btn btn-success">Sign Up</button>
             </form>
         </div>
     </div>
 </div>
-
-<script type="text/ng-template">
-
-</script>
+<pre>
+    {{ user | json }}
+</pre>

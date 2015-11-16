@@ -1,0 +1,14 @@
+<label for="usernameInput" class="control-label">Username</label>
+<input type="text" id="usernameInput" name="usernameInput" class="form-control" ng-model="user.name" ng-model="user.name" required ng-minlength="3">
+<ng-messages for="signUpForm.usernameInput.$error" ng-if="signUpForm.usernameInput.$dirty">
+    <ng-message when="required">
+        <p class="help-block">
+            You need a username to signup!
+        </p>
+    </ng-message>
+    <ng-message when="minlength">
+        <p class="help-block">
+            Your username should be at least 3 characters long!
+        </p>
+    </ng-message>
+</ng-messages>
